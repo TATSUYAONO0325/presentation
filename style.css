@@ -1,0 +1,84 @@
+body {
+    font-family: 'Yu Gothic','Yu Gothic Medium','メイリオ','MS ゴシック','游ゴシック Medium',sans-serif;
+}
+
+.dummy {
+    background: rgb(255, 138, 177);
+    padding: 20px 0 20px;
+}
+
+h1 {
+    text-align: center;
+    margin: 0 auto;
+    width: 900px;
+    font-weight: bold;
+    font-size: 60px;
+}
+
+.title {
+    margin: 0 auto;
+    width: 900px;
+    font-weight: bold;
+    font-size: 30px;
+    text-decoration: underline;
+}
+
+.sub {
+    margin: 0 auto;
+    width: 900px;
+    font-size: 20px;
+}
+
+#game_board {
+    padding: 10px;
+    margin: 0 auto;
+    width: 865px;
+    height: 890px;
+    overflow: hidden;
+}
+
+.card {
+    width: 200px;
+    height: 280px;
+    line-height: 80px;
+    border: 1px solid silver;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 26px;
+    font-weight: bold;
+    box-shadow: gray 2px 2px;
+    background: white;
+    float: left;
+    cursor: pointer;
+    margin: 5px;
+}
+
+img{
+    border-radius: 10px;
+    width: 200px;
+    height: 280px;
+}
+
+.back {
+    background-image: url('./img/back.jpg');
+    background-size: 200px 280px;
+}
+
+.finish {
+    opacity: 0;
+    cursor: default;
+}
+
+.impressions .img {
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.footer .copy {
+    text-align: center;
+    margin-top: 80px;
+    background: rgb(255, 138, 177);
+    color: rgb(255, 255, 255);
+    padding: 7px 0 7px;
+}
