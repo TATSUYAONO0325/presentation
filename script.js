@@ -18,11 +18,11 @@ window.onload = function () {
     } 
  
     shuffle(arr);
-    let gameboard = document.getElementById('game_board');
+    let gameboard = document.getElementById("game_board");
 
     for (i = 0; i < 12; i++) {
-        let div = document.createElement('div');
-        div.className = 'card back'; 
+        let div = document.createElement("div");
+        div.className = "card back"; 
         div.number = arr[i]; 
         div.onclick = turn;
         gameboard.appendChild(div);
@@ -37,14 +37,15 @@ function shuffle(arr) {
         i = Math.floor(Math.random() * n--);
         [arr[n], arr[i]] = [arr[i], arr[n]]
     }
+    console.log(arr)
     return arr;
 }
 
 function turn(e) {
     let div = e.target; 
     if (backTimer) return; 
-    if (div.innerHTML == '') {
-        div.className = 'card'; 
+    if (div.innerHTML == "") {
+        div.className = "card"; 
         div.innerHTML = imgTagArr[div.number];
     } else {
         return 
@@ -56,30 +57,30 @@ function turn(e) {
         if (cardFirst.number == div.number) {
             countUnit++;
             backTimer = setTimeout(function () {
-                div.className = 'card finish';
-                cardFirst.className = 'card finish';
+                div.className = "card finish";
+                cardFirst.className = "card finish";
                 backTimer = NaN;
                 if (countUnit == 6) { 
                     let img = document.getElementById("image_place");
                     img.src = "./img/1.jpg";
                     clearInterval(timer); 
                 }
-            }, 500)
+            }, 1000)
         } else {
             backTimer = setTimeout(function () {
-                div.className = 'card back';
-                div.innerHTML = '';
-                cardFirst.className = 'card back';
-                cardFirst.innerHTML = '';
+                div.className = "card back";
+                div.innerHTML = "";
+                cardFirst.className = "card back";
+                cardFirst.innerHTML = "";
                 cardFirst = null;
                 backTimer = NaN;
-            }, 500);
+            }, 1000);
         }
         flgFirst = true;
     }
 }
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("btn").addEventListener("click", function(){
     window.location.reload();
     })
