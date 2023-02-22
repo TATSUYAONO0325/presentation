@@ -3,12 +3,12 @@ let flgFirst = true;
 let cardFirst;
 let countUnit = 0;
 
-let img_arr = [
+let imgArr = [
     "1", "2", "3", "4", "5","6"
 ];
-let img_tag_arr = [];
+let imgTagArr = [];
 for (let i = 0; i < 6; i++ ){
-    img_tag_arr.push("<img src='./img/" + img_arr[i] + ".jpg'>")
+    imgTagArr.push("<img src='./img/" + imgArr[i] + ".jpg'>")
 }
 
 window.onload = function () {
@@ -19,14 +19,14 @@ window.onload = function () {
     } 
  
     shuffle(arr);
-    let game_board = document.getElementById('game_board');
+    let gameBoard = document.getElementById('gameBoard');
 
     for (i = 0; i < 12; i++) {
         let div = document.createElement('div');
         div.className = 'card back'; 
         div.number = arr[i]; 
         div.onclick = turn;
-        game_board.appendChild(div);
+        gameBoard.appendChild(div);
     }
     startTime = new Date(); 
     startTimer(); 
@@ -46,7 +46,7 @@ function turn(e) {
     if (backTimer) return; 
     if (div.innerHTML == '') {
         div.className = 'card'; 
-        div.innerHTML = img_tag_arr[div.number];
+        div.innerHTML = imgTagArr[div.number];
     } else {
         return 
     }
