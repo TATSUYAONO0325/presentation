@@ -18,14 +18,14 @@ window.onload = function () {
     } 
  
     shuffle(arr);
-    let gameBoard = document.getElementById('gameBoard');
+    let game_board = document.getElementById('game_board');
 
     for (i = 0; i < 12; i++) {
         let div = document.createElement('div');
         div.className = 'card back'; 
         div.number = arr[i]; 
         div.onclick = turn;
-        gameBoard.appendChild(div);
+        game_board.appendChild(div);
     }
     startTime = new Date(); 
     startTimer(); 
