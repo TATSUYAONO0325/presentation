@@ -3,9 +3,8 @@ let flgFirst = true;
 let cardFirst;
 let countUnit = 0;
 
-let imgArr = [
-    "1", "2", "3", "4", "5","6"
-];
+let imgArr = ["1", "2", "3", "4", "5","6"];
+
 let imgTagArr = [];
 for (let i = 0; i < 6; i++ ){
     imgTagArr.push("<img src='./img/" + imgArr[i] + ".jpg'>")
