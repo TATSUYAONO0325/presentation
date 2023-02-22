@@ -77,9 +77,7 @@ function turn(e) {
                 cardFirst.className = "card finish";
                 backTimer = NaN;
                 if (countUnit == 6) { 
-                    let img = document.getElementById("image_place");
-                    img.src = "./img/1.jpg";
-                    clearInterval(timer); 
+                    console.log("🥳クリアです！！！🥳")
                 }
             }, 1000)
         } else {
