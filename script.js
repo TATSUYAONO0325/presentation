@@ -60,6 +60,8 @@ function turn(e) {
                 cardFirst.className = 'card finish';
                 backTimer = NaN;
                 if (countUnit == 6) { 
+                    let img = document.getElementById("image_place");
+                    img.src = "./img/1.jpg";
                     clearInterval(timer); 
                 }
             }, 500)
@@ -76,3 +78,9 @@ function turn(e) {
         flgFirst = true;
     }
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById("btn").addEventListener("click", function(){
+    window.location.reload();
+    })
+});
